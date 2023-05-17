@@ -1,0 +1,8 @@
+-#!/bin/sh     
+ssh ssh ec2-user@44.225.18.140 <<EOF       
+ cd /devops/Testing
+ git pull      
+ npm install --production      
+ pm2 restart all
+ exit      
+EOF
